@@ -1,0 +1,61 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "c31c1d9790b0321619cd40b24fbbf7dd",
+    "packages": [
+        {
+            "name": "tahrz/simple-telegram-bot",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Tahrz/simple-telegram-bot.git",
+                "reference": "073c2554786d9b33fff8d4a9d520e94331f6edbe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Tahrz/simple-telegram-bot/zipball/073c2554786d9b33fff8d4a9d520e94331f6edbe",
+                "reference": "073c2554786d9b33fff8d4a9d520e94331f6edbe",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SimpleTelegramBot\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taras Ziabukhin",
+                    "email": "taras.ziabukhin@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Packadge with connection service and simple helpers",
+            "keywords": [
+                "PHP telegram bot",
+                "simple telegram bot library"
+            ],
+            "time": "2019-06-03T17:55:41+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^7.2"
+    },
+    "platform-dev": []
+}

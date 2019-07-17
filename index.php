@@ -9,10 +9,12 @@ require_once 'core/config.php';
 $update = file_get_contents("php://input");
 $update = json_decode($update, false);
 
+$connectionService = new \SimpleTelegramBot\Connection\CurlConnectionService();
+
 /**
  * Init Commander
  */
-$commander = new \Core\Base\Commander($update);
+$commander = new \Core\Base\Commander($update, $connectionService);
 
 /**
  * Set commands and reactions on it

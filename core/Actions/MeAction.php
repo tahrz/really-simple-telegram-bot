@@ -1,9 +1,10 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Core\Actions;
 
+use SimpleTelegramBot\Chat\MessageHelper;
 use Core\Repository\FileStorageRepository;
-use SimpleTelegramBot\Helpers\MessageHelper;
+use SimpleTelegramBot\Connection\ConnectionService;
 
 /**
  * Class MeAction
@@ -14,16 +15,18 @@ class MeAction
 {
     /**
      * @param object $update
+     * @param ConnectionService $connectionService
      */
-    public function __invoke(object $update): void
+    public function __invoke(object $update, ConnectionService $connectionService): void
     {
         $repo = new FileStorageRepository();
+        $messageHelper = new MessageHelper($connectionService);
 
         if ($repo->checkOnExistUserData($update)) {
             $user = $repo->getDataByUserId($update->message->chat->username);
-            MessageHelper::sendWithoutAnswer($update->message->chat->id, 'You are: ' . $user->firstName . ' ' . $user->lastName);
+            $messageHelper->sendWithoutResponse($update->message->chat->id, 'You are: ' . $user->firstName . ' ' . $user->lastName);
         } else {
-            MessageHelper::sendWithoutAnswer($update->message->chat->id, 'I can`t remember you');
+            $messageHelper->sendWithoutResponse($update->message->chat->id, 'I can`t remember you');
         }
     }
 }

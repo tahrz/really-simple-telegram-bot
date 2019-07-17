@@ -1,8 +1,9 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Core\Actions;
 
-use SimpleTelegramBot\Helpers\MessageHelper;
+use SimpleTelegramBot\Chat\MessageHelper;
+use SimpleTelegramBot\Connection\ConnectionService;
 
 /**
  * Class CommandNotFoundAction
@@ -13,9 +14,11 @@ class CommandNotFoundAction
 {
     /**
      * @param object $update
+     * @param ConnectionService $connectionService
      */
-    public function __invoke(object $update): void
+    public function __invoke(object $update, ConnectionService $connectionService): void
     {
-        (new MessageHelper($update->message->chat->id, 'unsupported command!'))->sendWithArrayResponse();
+        $messageHelper = new MessageHelper($connectionService);
+        $messageHelper->sendWithoutResponse($update->message->chat->id, 'unsupported command!');
     }
 }

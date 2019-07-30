@@ -41,13 +41,13 @@ class FileStorageRepository implements RepositoryInterface
     }
 
     /**
-     * @param string $username
+     * @param string $userName
      * @return object
      */
-    public function getDataByUserId(string $username): object
+    public function getDataByUserName(string $userName): object
     {
         $data = json_decode(file_get_contents(DATA_FILE));
 
-        return $data->$username;
+        return $data->$userName;
     }
 }

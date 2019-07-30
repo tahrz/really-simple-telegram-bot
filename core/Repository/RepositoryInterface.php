@@ -20,8 +20,8 @@ interface RepositoryInterface
     public function checkOnExistUserData(object $update): bool;
 
     /**
-     * @param string $username
+     * @param string $userName
      * @return object
      */
-    public function getDataByUserId(string $username): object;
+    public function getDataByUserName(string $userName): object;
 }

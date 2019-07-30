@@ -40,8 +40,8 @@
             "authors": [
                 {
                     "name": "Taras Ziabukhin",
-                    "email": "taras.ziabukhin@gmail.com",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "taras.ziabukhin@gmail.com"
                 }
             ],
             "description": "Packadge with connection service and simple helpers",

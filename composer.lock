@@ -4,27 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f22e445b8a7484840f8ccb6415e82d89",
+    "content-hash": "6666d436cd203dafc6dfb06c2f35e9cb",
     "packages": [
         {
             "name": "tahrz/simple-telegram-bot",
-            "version": "1.3.5",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tahrz/simple-telegram-bot.git",
-                "reference": "2fd9762c1c52fd62e098fc570567bb18d2a0bacf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tahrz/simple-telegram-bot/zipball/2fd9762c1c52fd62e098fc570567bb18d2a0bacf",
-                "reference": "2fd9762c1c52fd62e098fc570567bb18d2a0bacf",
-                "shasum": ""
+                "url": "https://github.com/tahrz/simple-telegram-bot",
+                "reference": "ccaebb8fba45bc635f62d84558aef310ccfc8b34"
             },
             "require": {
-                "php": "^7.2"
+                "php": "^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8"
+                "phpunit/phpunit": "^9"
             },
             "type": "library",
             "autoload": {
@@ -33,26 +27,25 @@
                     "Tests\\": "tests/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
                     "name": "Taras Ziabukhin",
-                    "role": "Developer",
-                    "email": "taras.ziabukhin@gmail.com"
+                    "email": "taras.ziabukhin@gmail.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Packadge with connection service and simple helpers",
             "keywords": [
+                "PHP",
                 "PHP telegram bot",
-                "php",
                 "simple telegram bot library",
                 "telegram bot api",
                 "webhook"
             ],
-            "time": "2019-07-14T16:17:23+00:00"
+            "time": "2023-10-29T21:27:56+00:00"
         }
     ],
     "packages-dev": [],
@@ -62,7 +55,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.2"
+        "php": "^8.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }

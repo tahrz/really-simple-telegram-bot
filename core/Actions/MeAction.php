@@ -23,7 +23,7 @@ class MeAction
         $messageHelper = new MessageHelper($connectionService);
 
         if ($repo->checkOnExistUserData($update)) {
-            $user = $repo->getDataByUserId($update->message->chat->username);
+            $user = $repo->getDataByUserName($update->message->chat->username);
             $messageHelper->sendWithoutResponse($update->message->chat->id, 'You are: ' . $user->firstName . ' ' . $user->lastName);
         } else {
             $messageHelper->sendWithoutResponse($update->message->chat->id, 'I can`t remember you');

@@ -54,16 +54,15 @@ class Commander
      * @return object
      * @throws ReflectionException
      */
-    public function run(): object
+    public function run(): void
     {
         if (isset($this->commands[$this->update->message->text])) {
-            return (new ReflectionClass($this->commands[$this->update->message->text]))
-                ->newInstance()(
-                    $this->update,
-                    $this->connectionService
-                );
+            (new $this->commands[$this->update->message->text])(
+                $this->update,
+                $this->connectionService
+            );
         }
 
-        return (new CommandNotFoundAction())($this->update, $this->connectionService);
+        (new CommandNotFoundAction())($this->update, $this->connectionService);
     }
 }
